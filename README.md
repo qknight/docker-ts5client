@@ -4,11 +4,11 @@ This container builds ghcr.io/linuxserver/baseimage-rdesktop-web:focal and puts 
 
 1. compile it
 
-      docker build -t docker-ts5client .
+        docker build -t docker-ts5client .
 
 2. run the container
 
-      docker run -v ${PWD}:/mnt -p 80:3000/tcp -i -t  docker-ts5client:latest
+        docker run -v ${PWD}:/mnt -p 80:3000/tcp -i -t  docker-ts5client:latest
 
 3. start the application
 
