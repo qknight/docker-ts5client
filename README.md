@@ -15,6 +15,15 @@ In this case we execute the ts5client, which is quite handy for testing.
 
   Inside the container use the xterm with right mouse button to start the /ts5client/TeamSpeak binary.
 
+This work was inspired by https://gitlab.com/Linuxserver.io/docker-wireshark
+
+#  Limitations
+
+* no VoIP (for example via webrtc)
+* no copy'n'paste
+* no persistance, all configuration is gone after restart
+* no TLS, http only
+
 # License
 
 public domain as far as this Dockerfile goes
