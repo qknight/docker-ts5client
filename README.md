@@ -11,9 +11,9 @@ In this case we execute the ts5client, which is quite handy for testing.
 
         docker run -v ${PWD}:/mnt -p 80:3000/tcp -i -t  docker-ts5client:latest
 
-3. start the application
+3. Once you visit the webpage, http://example.com, the TeamSpeak will automatically start
 
-  Inside the container use the xterm with right mouse button to start the /ts5client/TeamSpeak binary.
+  Inside the container you can also use **xterm** with right mouse button to start the /ts5client/TeamSpeak binary.
 
 This work was inspired by https://gitlab.com/Linuxserver.io/docker-wireshark
 
