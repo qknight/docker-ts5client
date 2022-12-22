@@ -1,6 +1,7 @@
 # Motivation
 
-This container builds ghcr.io/linuxserver/baseimage-rdesktop-web:focal and puts the teamspeak beta client into it so it can be executed from the web.
+This docker container, builds on top of ghcr.io/linuxserver/baseimage-rdesktop-web:focal, and one can then execute linux programs on the web basically.
+In this case we execute the ts5client, which is quite handy for testing.
 
 1. compile it
 
