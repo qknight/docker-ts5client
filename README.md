@@ -23,7 +23,7 @@ This work was inspired by https://gitlab.com/Linuxserver.io/docker-wireshark
 * no copy'n'paste
 * no persistance, all configuration is gone after restart
 * no TLS, http only
-
+* no access control (.htpasswd or similar)
 # License
 
 public domain as far as this Dockerfile goes
