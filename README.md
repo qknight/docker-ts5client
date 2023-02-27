@@ -11,11 +11,17 @@ In this case we execute the ts5client, which is quite handy for testing.
 
         docker run -v ${PWD}:/mnt -p 80:3000/tcp -i -t docker-ts5client:latest
 
-3. Once you visit the webpage, http://example.com, the TeamSpeak will automatically start
+3. Once you visit the webpage, localhost:80, the TeamSpeak will automatically start
 
   Inside the container, the ts5client should start automatically already. You can also use **xterm** with right mouse button to start the /ts5client/TeamSpeak binary or use the TeamSpeak link below the xterm link.
 
 This work was inspired by https://gitlab.com/Linuxserver.io/docker-wireshark
+
+# Windows warning
+
+On Windows the line endings are LFCR and they must be LF only for the files in /root.
+
+Note: If they have the wrong format the TeamSpeak application will not autostart nor will the menu be correct.
 
 #  Limitations
 
@@ -24,6 +30,7 @@ This work was inspired by https://gitlab.com/Linuxserver.io/docker-wireshark
 * no persistance, all configuration is gone after restart
 * no TLS, http only
 * no access control (.htpasswd or similar)
+
 # License
 
 public domain as far as this Dockerfile goes
