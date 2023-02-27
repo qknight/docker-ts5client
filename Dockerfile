@@ -7,6 +7,7 @@ ENV TITLE=ts5client
 RUN apt-get update && apt install wget tar bzip2 libnss3 libnotify4 -y
 RUN wget https://files.teamspeak-services.com/pre_releases/client/5.0.0-beta70/teamspeak-client.tar.gz
 RUN mkdir /ts5client && mv teamspeak-client.tar.gz /ts5client && cd /ts5client && tar xvf teamspeak-client.tar.gz && chmod u+x TeamSpeak && rm teamspeak-client.tar.gz
+RUN ln -s /ts5client/TeamSpeak /bin/TeamSpeak
 COPY /root /
 EXPOSE 3000
 VOLUME /config
