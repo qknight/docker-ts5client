@@ -5,11 +5,11 @@ In this case we execute the ts5client, which is quite handy for testing.
 
 1. compile it
 
-        docker build -t docker-ts5client .
+        docker build -t docker-ts5client:latest .
 
 2. run the container
 
-        docker run -v ${PWD}:/mnt -p 80:3000/tcp -i -t  docker-ts5client:latest
+        docker run -v ${PWD}:/mnt -p 80:3000/tcp -i -t docker-ts5client:latest
 
 3. Once you visit the webpage, http://example.com, the TeamSpeak will automatically start
 
