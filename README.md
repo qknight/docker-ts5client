@@ -23,6 +23,19 @@ On Windows the line endings are LFCR and they must be LF only for the files in /
 
 Note: If they have the wrong format the TeamSpeak application will not autostart nor will the menu be correct.
 
+Files can be checked for encoding in the Docker Linux environment with `cat -A filename` and it should look like this:
+
+    root@8a85ce970105:/mnt# cat -A /etc/cont-init.d/56-openboxcopy
+    #!/usr/bin/with-contenv bash$
+    $
+    # default file copies first run$
+    [[ ! -f /config/.config/openbox/menu.xml ]] && \$
+        mkdir -p /config/.config/openbox && \$
+        cp /defaults/menu.xml /config/.config/openbox/menu.xml && \$
+        chown -R abc:abc /config/.config$
+
+If you see any ^M it is windows LFCR encoding and needs conversion.
+
 #  Limitations
 
 * no VoIP (for example via webrtc)
